@@ -26,7 +26,7 @@ def predict():
         img_bytes = file.read()
         img = Image.open(io.BytesIO(img_bytes))
         results = model(img, size=640)
-        
+        data_raw = results
         # for debugging
         data = results.pandas().xyxy[0].to_json(orient="records")
         mydata = json.loads(data)
@@ -85,7 +85,7 @@ if __name__ == "__main__":
    #  model = torch.hub.load(
 #         "ultralytics/yolov5", "yolov5s", pretrained=True, force_reload=True, autoshape=True
 #     )  # force_reload = recache latest code
-    model = torch.hub.load('./yolov5', 'custom', path='best59posneg.pt', source='local')
+    model = torch.hub.load('./yolov5', 'custom', path='bestver1.pt', source='local')
     model.eval()
     app.run(host="0.0.0.0", port=args.port)  # debug=True causes Restarting with stat
 
