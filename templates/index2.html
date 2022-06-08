@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>แบบส่งผลการประเมิน ATK ของนักเรียน</title>
+    <link rel="stylesheet" href="/static/style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/static/mainscript.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/static/varee-logo.png" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+        <div class="title">VCS Student's ATK Submission Form</div>
+        <br>
+        <form  method="post" enctype="multipart/form-data">
+            <div class="user-detials">
+                <div class="input-box">
+                    <span class="detials">Student Code</span>
+                    <input type="text" name="student_id" placeholder="student code" id="dm1" required>
+
+                </div>
+                <div class="input-box">
+                    <span class="detials">Name</span>
+                    <input type="text"  id="Name" readonly>
+
+                </div>
+                <div class="input-box">
+                    <span class="detials">Surname</span>
+                    <input type="text" id="Surname" readonly>
+
+                </div>
+                <div class="input-box">
+                    <span class="detials">ATK Picture</span>
+                    <input type="file" placeholder="image" name="image"  required>
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="send" name="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
