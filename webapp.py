@@ -79,7 +79,7 @@ def predict():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Flask app exposing yolov5 models")
-    parser.add_argument("--port", default=5000, type=int, help="port number")
+    parser.add_argument("--port", default=5001, type=int, help="port number")
     args = parser.parse_args()
 
    #  model = torch.hub.load(
