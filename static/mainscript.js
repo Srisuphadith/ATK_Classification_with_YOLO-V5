@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#dm1").change(function () {
         $.ajax({
-            url: "/static/auto_2.php",
+            url: "static/auto_2.php",
             type: "GET",
             data: 'stu_id=' + $("#dm1").val()
         })
